@@ -3,14 +3,14 @@ const app = express()
 const bodyParser = require('body-parser')
 const PORT = 5000
 const axios = require('axios')
-const api_call = require('./gmail_get_request')
+const api_call = require('./getAllMails')
 
 
 app.listen(PORT,()=>{
     console.log("Running application")
 })
 
-console.log(api_call.mails_today())
+api_call.mails_yesterday()
 
 // axios.get('https://jsonplaceholder.typicode.com/users')
 //         .then(function(response){
