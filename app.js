@@ -10,7 +10,7 @@ const set_db = require('./mongodbConfig')
 app.listen(PORT,()=>{
     console.log("Running application")
 })
- 
+
 
 conn = set_db.db_connection()
 conn.then(()=>{
