@@ -2,27 +2,28 @@ const api_helper = require('./api_constants')
 const request_call = require('./request_call')
 const getSpends = require('./getSpendDetails')
 const getToken = require('./getGoogleAccessToken')
+const { yesterday } = require('./api_constants')
 
 module.exports.mails_yesterday = async function(){
 try {
- getsAllMail = api_helper.gets_all_mail.concat(api_helper.yesterday);
  accessToken = await getToken.access_token();
- console.log('access Token is: '+ accessToken);
+ for(category of api_helper.array_of_categories){
+ getsAllMail =`${api_helper.gets_all_mail} after:${yesterday} before:${moment(yesterday, 'YYYY/MM/DD').add(1, 'days').format( 'YYYY/MM/DD')} label:${category}`
+ console.log(`Request being made is ${getsAllMail}`)
   response = await request_call('GET',getsAllMail,'',{ Authorization: "Bearer " + accessToken})
-  console.log(response.data.messages)
+  console.log(response.data)
   numberOfRecords = response.data.resultSizeEstimate
-  console.log(response.data.resultSizeEstimate)
 
   if (numberOfRecords>0){
     messagesId = response.data.messages
     messagesId.map(message=>{
-      console.log(message.threadId)
-      getSpends.getThreadDetails(message.threadId)
+      getSpends.getThreadDetails(message.threadId, category)
     })
   }
+ }
 }
- catch{
-   console.log('Sorry! something went brutally wrong 😢')
+ catch(error){
+   console.log('Sorry! something went brutally wrong 😢'+ error.message)
  }
 
 }
