@@ -7,6 +7,7 @@ module.exports ={
      before : 'before:'+moment().format('YYYY/MM/DD'),
      get_mail_details_url : 'https://gmail.googleapis.com/gmail/v1/users/shireenbanu89@gmail.com/messages/',
      today : moment(),
+     array_of_categories: ['isMinni', 'BeautyNeeds','Cravings','DailyGrocery','MomsQuota','OfficeTravelNeeds','Outings'],
      spent_date : moment().subtract(1,'days'),
-     renew_access_token:'https://accounts.google.com/o/oauth2/token?client_secret=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&grant_type=refresh_token&client_id=179904550079-s0n16f88l92blimucpfcinn5q5bkmu2m.apps.googleusercontent.com&refresh_token=1//04PuA1fWb6BfyCgYIARAAGAQSNwF-L9Ir65zCfPUcJei-SNpTiti8IrKLyQ5YZrMbxD4j6r6L_GdxQNEES3jUUj5ZRRxRBwXQlno',
+     renew_access_token:'https://accounts.google.com/o/oauth2/token?client_secret=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&grant_type=refresh_token&client_id=179904550079-s0n16f88l92blimucpfcinn5q5bkmu2m.apps.googleusercontent.com&refresh_token=1//04rHbRzInB27cCgYIARAAGAQSNwF-L9Ir2--O7TzFKEhs0IIJrFQhGdfU2yZ8qqoe6Hac48tPITiCGpcW1pS2AGbpHKkYUWD0HyM',
 }
