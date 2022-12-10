@@ -6,6 +6,7 @@ const axios = require('axios')
 const api_call = require('./getAllMails')
 const set_db = require('./mongodbConfig')
 const access_token = require('./getGoogleAccessToken')
+const topHeader = require('./topFiveSpend')
 
 app.listen(PORT,()=>{
     console.log("Running application")
@@ -14,22 +15,10 @@ app.listen(PORT,()=>{
 
 conn = set_db.db_connection()
 conn.then(()=>{
-    console.log('successful')
-//   console.log(  access_token.access_token().then(()=>{console.log(accessToken)}))
-//   access_token.access_token().then(()=>{a = accessToken})
-//   console.log("a "+ a)
-
+    console.log('successfully db connection established')
     api_call.mails_yesterday()
+    // topHeader.getTopFive()
+
 })
 .catch(err=>{console.log("error"+err)})
 
-// axios.get('https://jsonplaceholder.typicode.com/users')
-//         .then(function(response){
-        
-//         })
-//         .catch(function(response){
-          
-//         })
-//         .then(function(){
-//             console.log("Alaway Executed")
-//         })
