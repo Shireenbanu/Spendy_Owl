@@ -1,2 +1,4 @@
 /node_modules
-/api_constants.js
+/.env
+/yarn.lock
+/package-lock.json

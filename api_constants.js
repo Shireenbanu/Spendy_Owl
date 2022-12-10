@@ -6,7 +6,6 @@ module.exports ={
      yesterday :  'after:'+moment().subtract(3, 'days').format('YYYY/MM/DD'),
      get_mail_details_url : 'https://gmail.googleapis.com/gmail/v1/users/shireenbanu89@gmail.com/messages/',
      today : moment(),
-     db_url : 'mongodb+srv://shireenbanu:+ERPX&FEyLLwc8L@clusterspendyowl.w16igpn.mongodb.net/?retryWrites=true&w=majority',
      spent_date : moment().subtract(1,'days')
 }
 

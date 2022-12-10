@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 const api_constants = require('./api_constants')
-
+const env = require("dotenv").config();
 module.exports.db_connection= function(){
 
-    const connection =  mongoose.connect(api_constants.db_url);
+    const connection =  mongoose.connect(process.env.db_url);
     console.log('Db connection established successfully!')
    return connection
 }
