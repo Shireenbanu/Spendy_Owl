@@ -1,8 +1,8 @@
 const cron = require('node-cron');
-const { gets_all_mail } = require('./getAllMails');
+const mails = require('./getAllMails')
 
 // Schedule tasks to be run on the server.
-cron.schedule('* * * * *', function() {
+cron.schedule('* * 9 * *', async function() {
     console.log('running a task every minute');
-    gets_all_mail.mails_yesterday()
+     await mails.mails_yesterday()
   });
