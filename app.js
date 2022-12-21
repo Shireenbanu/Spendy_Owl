@@ -32,17 +32,17 @@ app.get('/top_four_spends', (req, res) => {
 conn.then(async()=>{
     var moment = require('moment');
     var start_date = moment('2022-11-01');
-    var end_date = moment('2022-11-30');
+    var end_date = moment('2022-12-18');
     
     // for (var m = moment(start_date); m.isBefore(end_date); m.add(1, 'days')) {
     //     console.log(m.format('YYYY/MM/DD'));
     //     apiDate = m.format('YYYY/MM/DD')
-    //     await api_call.mails_yesterday(apiDate)
+    //     await api_call.mails_yesterday()
 
     // }
     // spendDetail.deleteMany({}).then(console.log("deleted all")).catch()
-    console.log('successfully db connection established')
-    // await api_call.mails_yesterday()
+    // console.log('successfully db connection established')
+    await api_call.mails_yesterday()
 
 })
 .catch(err=>{console.log("error"+err)})

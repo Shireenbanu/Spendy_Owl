@@ -9,5 +9,5 @@ module.exports ={
      today : moment(),
      array_of_categories: ['isMinni', 'BeautyNeeds','Cravings','DailyGrocery','MomsQuota','OfficeTravelNeeds','Outings'],
      spent_date : moment().subtract(1,'days'),
-     renew_access_token:'https://accounts.google.com/o/oauth2/token?client_secret=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&grant_type=refresh_token&client_id=179904550079-s0n16f88l92blimucpfcinn5q5bkmu2m.apps.googleusercontent.com&refresh_token=1//04rHbRzInB27cCgYIARAAGAQSNwF-L9Ir2--O7TzFKEhs0IIJrFQhGdfU2yZ8qqoe6Hac48tPITiCGpcW1pS2AGbpHKkYUWD0HyM',
+     renew_access_token:'https://accounts.google.com/o/oauth2/token?client_secret=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&grant_type=refresh_token&client_id=179904550079-s0n16f88l92blimucpfcinn5q5bkmu2m.apps.googleusercontent.com&refresh_token=1//049nip6UYASDkCgYIARAAGAQSNwF-L9IrWMN6tQYvlOdgGa9J1zrCkwKAWR73m32oMaSH4XUUDdoX5d-oCciFI_LoYyjiEijDu3Q',
 }
