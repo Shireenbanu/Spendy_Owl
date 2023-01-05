@@ -1,8 +1,8 @@
 # Spendy_Owl-🐣
 
-#How to run app locally 
+# How to run app locally 
 
-##To start the App
+# #To start the App
 npm start
 
 ## To docker images  (make sure docker is running before you run the command)
