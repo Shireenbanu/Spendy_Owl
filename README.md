@@ -11,7 +11,7 @@
   
   
 
-***To dockerise the application:
+***To dockerise the application***:
 
 It intern creates a docker images  (make sure docker is running before you run the command)***
 
